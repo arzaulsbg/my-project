@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Registration Form</title>
+  <link rel="stylesheet" href="Experiment_1.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Student Registration Form</h2>
+    <form action="###" method="POST">
+      
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required pattern="[A-Za-z\s]+" " placeholder="Alex Smith"> <br>
+
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required  placeholder="example@gmail.com"> <br>
+
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" required min="1" max="120"  placeholder="15"> <br>
+
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
