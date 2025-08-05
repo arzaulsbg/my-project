@@ -1,0 +1,50 @@
+/* Reset default spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main grid layout */
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr 3fr; /* Sidebar and content */
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  /* gap: 10px; */
+  /* padding: 10px; */
+}
+
+/* Top header spans both columns */
+header {
+  grid-column: 1 / span 2;
+  border: 2px solid black;
+  background-color: green;
+  /* padding: 10px; */
+  color: white;
+}
+
+/* Left-side navigation */
+nav {
+  border: 2px solid black;
+  background-color: grey;
+  /* padding: 10px; */
+}
+
+/* Main content area */
+main {
+  border: 2px solid black;
+  background-color: blue;
+  color: white;
+  /* padding: 20px; */
+}
+
+/* Footer spans both columns */
+footer {
+  grid-column: 1 / span 2;
+  border: 2px solid black;
+  background-color: green;
+  text-align: center;
+  /* padding: 10px; */
+  color: white;
+}
