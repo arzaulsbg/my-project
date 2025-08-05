@@ -8,18 +8,21 @@
     <!-- Links the external CSS file for styling -->
 </head>
 <body>
-  <!-- Main container for the banking user interface -->
-  <div class="banking-ui">
+  <body>
+  <!-- <div>: Main box that holds all the banking elements -->
+  <div class="container">
 
-    <!-- Display area for the current account balance -->
-    <div class="balance">$0</div>
-
-    <!-- Button to deposit money into the account -->
-    <button class="btn deposit">Deposit</button>
-
-    <!-- Button to withdraw money from the account -->
-    <button class="btn withdraw">Withdraw</button>
+    <!-- <div>: Shows the current balance of the user -->
+    <div id="balance">$2000</div>
+    <div class="button-container">
+            <!-- Deposit button - green button for adding money -->
+            <button id="depositBtn">Deposit</button> <!-- button to add money to account -->
+            <!-- Withdraw button - red button for taking money out -->
+            <button id="withdrawBtn">Withdraw</button> <!-- button to withdraw money from account -->
+      </div>
 
   </div>
+</body>
+
 </body>
 </html>

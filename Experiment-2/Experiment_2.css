@@ -1,70 +1,73 @@
-/* Reset & base */
-/* Remove default margin and padding, and use border-box for consistent sizing */
+/* Applies to all elements: removes default space and sets white background */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;               /* Removes space outside elements */
+    padding: 0;              /* Removes space inside elements */
+    background: white;       /* Sets white background for all elements */
+    box-sizing: border-box;  /* Includes padding in total width and height */
 }
 
-/* Style for the entire body of the page */
+/* Styles for the whole web page */
 body {
-  height: 1000px; /* Sets the height of the page */
-  display: flex; /* Enables flex layout */
-  justify-content: center; /* Centers content horizontally */
-  align-items: center; /* Centers content vertically */
-  background-color: #f4f4f4; /* Light gray background */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Sets the font */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean and readable font */
+    min-height: 100vh;        /* Makes body fill full screen height */
+    display: flex;            /* Uses flex layout */
+    justify-content: center;  /* Centers content left and right */
+    align-items: center;      /* Centers content top and bottom */
+    padding: 20px;            /* Adds space around the page edges */
 }
 
-/* Container styling */
-/* Styles for the banking interface box */
-.banking-ui {
-  background: white; /* White background */
-  padding: 30px; /* Inner spacing */
-  border-radius: 10px; /* Rounded corners */
-  text-align: center; /* Center-aligns text */
-  width: 350px; /* Fixed width */
+/* The main box for the banking interface */
+.container {
+    background: white;            /* White background */
+    border-radius: 15px;             /* Rounded corners */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); /* Light shadow for 3D effect */
+    padding: 40px;                    /* Space inside the box */
+    max-width: 400px;                /* Max width of the box */
+    width: 100%;                    /* Use full available width */
+    text-align: center;          /* Center all text */
 }
 
-/* Balance display */
-/* Style for the balance amount */
-.balance {
-  font-size: 40px; /* Large text */
-  color: #28a745; /* Green color for balance */
-  margin-bottom: 24px; /* Space below the balance */
+/* Shows the current account balance */
+#balance {
+    width: 100%;               /* Full width */
+    padding: 15px;             /* Space around the text */
+    font-size: 24px;           /* Large text */
+    font-weight: bold;         /* Thick text */
+    color: #333;               /* Dark gray text */
+    background-color: white;   /* White background inside the box */
+    margin-bottom: 24px;   /*Space below the balance */
 }
 
-/* Buttons */
-/* Base button styling */
-.btn {
-  display: block; /* Makes buttons take full width */
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border: 2px solid black;
-  border-radius: 6px;
-  color: white;
-  margin-bottom: 16px; /* Space below each button */
+/* Box that holds both buttons side by side */
+.button-container {
+    display: flex;             /* Flex layout to arrange buttons in a row */
+    gap: 15px;                 /* Space between buttons */
+    justify-content: center;   /* Center buttons horizontally */
+    align-items: center;       /* Align buttons vertically */
+    flex-wrap: wrap;           /* Allow buttons to wrap on smaller screens */
 }
 
-/* Deposit button color */
-.deposit {
-  background-color: #28a745; /* Green */
+/* Common styles for both buttons */
+button {
+    flex: 1;                   /* Make buttons share equal space */
+    padding: 15px 20px;        /* Space inside the button */
+    font-size: 16px;           /* Medium text size */
+    font-weight: 600;          /* Semi-bold text */
+    border: none;              /* No border */
+    border-radius: 8px;        /* Rounded edges */
+    cursor: pointer;           /* Show pointer on hover */
+    transition: all 0.3s ease; /* Smooth animation when hovering */
+    min-width: 120px;          /* Minimum width of each button */
 }
 
-/* Deposit button hover effect */
-.deposit:hover {
-  background-color: #218838; /* Darker green on hover */
-  color: black; /* Change text color on hover */
+/* Green button for deposit */
+#depositBtn {
+    background: #28a745;   /* Green background */
+    color: white;          /* White text */
 }
 
-/* Withdraw button color */
-.withdraw {
-  background-color: #dc3545; /* Red */
-}
-
-/* Withdraw button hover effect */
-.withdraw:hover {
-  background-color: #c82333; /* Darker red on hover */
-  color : black; /* Change text color on hover */
+/* Red button for withdraw */
+#withdrawBtn {
+    background: #dc3545;   /* Red background */
+    color: white;          /* White text */
 }
