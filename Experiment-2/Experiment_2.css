@@ -1,0 +1,70 @@
+/* Reset & base */
+/* Remove default margin and padding, and use border-box for consistent sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style for the entire body of the page */
+body {
+  height: 1000px; /* Sets the height of the page */
+  display: flex; /* Enables flex layout */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  background-color: #f4f4f4; /* Light gray background */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Sets the font */
+}
+
+/* Container styling */
+/* Styles for the banking interface box */
+.banking-ui {
+  background: white; /* White background */
+  padding: 30px; /* Inner spacing */
+  border-radius: 10px; /* Rounded corners */
+  text-align: center; /* Center-aligns text */
+  width: 350px; /* Fixed width */
+}
+
+/* Balance display */
+/* Style for the balance amount */
+.balance {
+  font-size: 40px; /* Large text */
+  color: #28a745; /* Green color for balance */
+  margin-bottom: 24px; /* Space below the balance */
+}
+
+/* Buttons */
+/* Base button styling */
+.btn {
+  display: block; /* Makes buttons take full width */
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid black;
+  border-radius: 6px;
+  color: white;
+  margin-bottom: 16px; /* Space below each button */
+}
+
+/* Deposit button color */
+.deposit {
+  background-color: #28a745; /* Green */
+}
+
+/* Deposit button hover effect */
+.deposit:hover {
+  background-color: #218838; /* Darker green on hover */
+  color: black; /* Change text color on hover */
+}
+
+/* Withdraw button color */
+.withdraw {
+  background-color: #dc3545; /* Red */
+}
+
+/* Withdraw button hover effect */
+.withdraw:hover {
+  background-color: #c82333; /* Darker red on hover */
+  color : black; /* Change text color on hover */
+}
