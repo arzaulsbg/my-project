@@ -4,7 +4,7 @@ Banking UI Design using HTML and CSS:
 
 It shows:
 
-	1.A balance (starts at $0)
+	1.A balance (starts at $2000)
 
 	2.Two buttons – one for Deposit and one for Withdraw
 
