@@ -8,26 +8,29 @@
   <!-- Links the external CSS file for styling -->
 </head>
 <body>
+    <input type="checkbox" id="switchMode"  />
 
   <!-- <div>: Main container for the entire dashboard layout -->
   <div class="dashboard">
+  
 
     <!-- <header>: Top bar with title and dark mode toggle -->
     <header>
       <h1>Admin Dashboard</h1>
 
       <!-- <label>: Right corner dark mode toggle (radio button) -->
-      <label style="float:right">
-        <input type="checkbox" id="DarkMode" name="theme" />
+        <label for="switchMode">
+        
         Dark Mode
       </label>
+      
     </header>
 
     <!-- <nav>: Left side menu with navigation links -->
     <nav>
-      <a href="home.html">Home</a><br>
-      <a href="users.html">Users</a><br>
-      <a href="settings.html">Settings</a><br>
+      <a href="home.html"> .Home</a><br>
+      <a href="users.html"> .Users</a><br>
+      <a href="settings.html"> .Settings</a><br>
     </nav>
 
     <!-- <main>: Main content area on the right -->
