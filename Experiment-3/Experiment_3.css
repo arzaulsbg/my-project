@@ -1,8 +1,8 @@
 
 .dashboard {
     display: grid;
-    grid-template-columns: 280px auto;
-    grid-template-rows: 100px auto 50px;
+    grid-template-columns: 200px auto;
+    grid-template-rows: 100px auto 40px;
     height: 100vh;
 }
 
@@ -53,10 +53,10 @@ body {
 }
 
 #switchMode:checked ~ .dashboard  {
-    --bg-header: #1b5e1f;
+    --bg-header: #117218;
     --bg-nav: #1a1a1a;
     --bg-main: #2a2a2a;
-    --bg-footer: #1b5e1f;
+    --bg-footer: ##117218;
     --text-color: #ffffff;
 }
 #switchMode {
