@@ -1,0 +1,130 @@
+# Live Character Counter for Textarea Project - Experiment 4
+
+A simple web-based character counter built with HTML, CSS, and JavaScript, which dynamically updates the character count as the user types into a textarea. It excludes newline characters from the count and provides a clean, minimal UI.
+
+-----------------------------------------------------------------------------------------------------------
+Step of  HTML structure:
+
+1.Container Section
+
+    <div class="counter-container"> wraps all elements for styling and structure.
+
+2.Title
+
+    <div class="counter-title">Live Character Counter</div> displays the heading.
+
+3.Textarea Input
+
+    <textarea id="myTextarea" placeholder="Start typing..."></textarea> is where the user types text.
+4.Character Count Display
+
+    <div>Characters: <span id="charCount"></span></div> dynamically shows the live character count.
+5.Script
+
+-----------------------------------------------------------------------------------------------------------
+### HTML Elements
+-- <div> – Main wrapper for structured layout.  
+-- <textarea> – Multi-line text input area.  
+-- <span> – Displays the character count inside the parent <div>.  
+-- <script> – Connects the JavaScript logic.  
+-- <link> – Links external CSS file.  
+
+Steps of CSS:
+1.Main Layout Container-----------------------------------------------------------------------------------
+   .counter-container {
+    border: 1px solid #222;  /* Gives a border to the container */
+    padding: 16px;           /* Adds spacing inside the container */
+    margin: 20px auto;       /* Centers container horizontally */
+    max-width: 600px;        /* Limits maximum width */
+    background: #fff;        /* White background for contrast */
+}
+
+-- border: 1px solid #222; → Adds a solid border of 1px thickness with a dark gray color (#222).
+-- padding: 16px; → Adds 16px inner space between the content and the border (inside the box).
+-- margin: 20px auto; → Adds 20px space on top and bottom, and centers the container horizontally.
+-- max-width: 600px; → Restricts the container’s width to a maximum of 600px for better readability.
+-- background: #fff; → Sets the container background color to white.
+
+2.Textarea Styling--------------------------------------------------------------------------------------------------
+    textarea {
+    width: 100%;
+    min-height: 80px;
+    font-size: 1em;
+    margin-bottom: 8px;
+}
+
+-- width: 100%; → Makes the textarea take up the full width of its parent container.
+-- min-height: 80px; → Ensures the textarea has at least 80px height, even if empty.
+-- font-size: 1em; → Sets the font size to 1em (equal to the parent element’s font size).
+-- margin-bottom: 8px; → Adds an 8px gap below the textarea for spacing.
+3.Character Count Text ----------------------------------------------------------------------------------------------
+   .char-count {
+    font-weight: bold;
+}
+-- font-weight: bold; → Makes the text inside the element bold for emphasis.
+-----------------------------------------------------------------------------------------------
+### CSS Technologies
+** Box Model – Used for margin, padding, and border adjustments.  
+** Typography Styling – Applied font-size, font-weight, and font-family for readability.  
+** Responsive Design – Implemented max-width for proper layout on various screen sizes.  
+** Background & Color Styling – Used background color and text color for better UI.  
+** Component Styling – Styled .counter-container, .counter-title, and textarea for a neat look.  
+-----------------------------------------------------------------------------------------------
+JavaScript Steps:
+1.Event Listener for DOM Load------------------------------------------------------------------------------------------
+window.addEventListener('DOMContentLoaded', function() {
+    var textarea = document.getElementById('myTextarea');
+    var charCount = document.getElementById('charCount');
+
+-- window.addEventListener('DOMContentLoaded', function() { … }); 
+   → Waits until the entire HTML document is fully loaded and parsed before running the code inside.
+
+-- var textarea = document.getElementById('myTextarea'); 
+   → Selects the <textarea> element with the id "myTextarea" and stores it in the variable `textarea`.
+
+-- var charCount = document.getElementById('charCount'); 
+   → Selects the element with the id "charCount" (likely a <span>) and stores it in the variable `charCount`.
+
+2.Character Counting Logic-------------------------------------------------------------------------------------------------
+   const handler = function() {
+    var value = textarea.value;
+    var newlineCount = (value.match(/\n/g) || []).length;
+    charCount.textContent = value.length - newlineCount;
+}
+
+-- const handler = function() { … };  
+   → Defines a function named `handler` that will calculate and update the character count.
+
+-- var value = textarea.value;  
+   → Gets the current text entered in the textarea and stores it in the variable `value`.
+
+-- var newlineCount = (value.match(/\n/g) || []).length;  
+   → Counts how many newline characters (\n) are in the textarea text.  
+      * value.match(/\n/g) → Finds all newline characters.  
+      * || [] → If there are none, use an empty array to avoid errors.  
+      * .length → Gets the number of newline characters.
+
+-- charCount.textContent = value.length - newlineCount;  
+   → Updates the text inside the charCount element to show the number of characters, excluding newline characters.
+------------------------------------------------------------------------------
+3.Attach Event
+    textarea.addEventListener('input', handler);
+--Updates the character count in real time as the user types.
+
+
+----------------------------------------------------------------------------------------------------------------------
+###JavaScript Features Uses:
+** Event Handling – DOMContentLoaded and input event listeners for dynamic updates.  
+** DOM Manipulation – Used getElementById() to access and update elements.  
+** String Length Calculation – Handled character counting excluding newline characters.  
+** Regular Expressions – Applied to detect and count newline characters.  
+** Real-Time Updates – Live character count displayed as the user types.  
+
+--------------------------------------------------------------------------------------------------------------------------
+Leaning Outcomes:----------------------------
+1. How to build a functional user interface using basic HTML tags.  
+2. How to style a form and display dynamically updated text using CSS.  
+3. How to use JavaScript event listeners (input event) for real-time updates.  
+4. How to manipulate the DOM using getElementById and textContent.  
+5. How to use regex to detect and exclude newline characters from the count.  
+
