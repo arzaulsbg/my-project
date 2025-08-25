@@ -1,0 +1,178 @@
+Dynamic Product Filter - Experiment 5
+
+A simple web-based product filter built with HTML, CSS, and JavaScript, which dynamically updates the product list based on the selected category from a dropdown menu. It uses data attributes for filtering and provides a clean, responsive UI.
+-----------------------------------------------------------------------------------------------------------
+Steps of HTML structure:
+
+1.Main Container
+
+<div class="product-container"> -- Wraps all elements for structured layout and styling.
+
+2.Title
+
+<h1>Product List</h1>-- Displays the main heading of the page.
+
+3.Filter Control Section
+
+<div class="controls">
+  <label for="categoryFilter">Filter by Category:</label>
+  <select id="categoryFilter">
+    <option value="All">All</option>
+    <option value="Clothing">Clothing</option>
+    <option value="Electronics">Electronics</option>
+    <option value="Books">Books</option>
+  </select>
+</div>
+-- <label> : Adds accessible text for dropdown.
+-- <select> : Creates dropdown for selecting category.
+-- <option> : Defines individual filter choices.
+
+4.Product List
+
+<ul id="productList" class="product-list" aria-live="polite">
+  <li class="product-item" data-category="Clothing">T-Shirt</li>
+  <li class="product-item" data-category="Clothing">Jeans</li>
+  <li class="product-item" data-category="Electronics">Headphones</li>
+  <li class="product-item" data-category="Electronics">Smartphone</li>
+  <li class="product-item" data-category="Books">Novel</li>
+  <li class="product-item" data-category="Books">Cookbook</li>
+</ul>
+
+
+-- <ul> : Container for all product list items.
+-- <li> : Each product item with data-category attribute for filtering.
+-----------------------------------------------------------------------------------------------------------
+HTML Elements
+
+-- <div> – Main wrapper for layout.
+-- <h1> – Displays title.
+-- <label> – Accessible label for dropdown.
+-- <select> & <option> – Creates category filter dropdown.
+-- <ul> & <li> – Displays list of products with data-category.
+-- <script> – Links JavaScript logic.
+-- <link> – Links CSS file.
+-----------------------------------------------------------------------------------------------------------
+Steps of CSS:
+
+1.Main Layout Container
+
+.product-container {
+    border: 1px solid #222;
+    padding: 16px;
+    margin: 20px auto;
+    max-width: 700px;
+    background: #fff;
+}
+-- border: Adds a solid border of 1px thickness with dark gray color (#222).
+-- padding: Adds 16px inner space inside the box.
+-- margin: 20px space on top/bottom, centers horizontally.
+-- max-width: Restricts width to 700px for readability.
+-- background: Sets white background.
+
+2.Title
+
+h1 {
+    margin: 0 0 12px 0;
+}
+-- margin: Removes top margin and adds 12px bottom margin for spacing.
+
+3.Filter Controls
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+-- display: flex – Aligns label and select horizontally.
+-- align-items: center – Centers items vertically.
+-- gap: 8px – Adds space between label and dropdown.
+-- margin-bottom: 12px – Creates space below controls section.
+
+4.Product List
+
+.product-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+-- list-style: none – Removes default bullets from list.
+-- padding: 0 – Removes default inner spacing.
+-- margin: 0 – Removes default outer spacing.
+
+5.Product Items
+
+.product-item {
+    background: #fafafa;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    padding: 10px 12px;
+    margin: 8px 0;
+}
+-- background: #fafafa – Sets light gray background.
+-- border: 1px solid #e5e7eb – Adds a light gray border.
+-- border-radius: 6px – Rounds the corners for a smooth look.
+-- padding: 10px 12px – Adds space inside the item (top-bottom:10px, left-right:12px).
+-- margin: 8px 0 – Adds vertical spacing between items.
+-----------------------------------------------------------------------------------------------------------
+CSS Technologies
+
+-- Box Model – Used for margin, padding, and border adjustments.
+-- Flexbox – Applied for horizontal alignment in controls.
+-- Responsive Design – max-width for better readability.
+-- Background & Colors – Used to enhance UI.
+-----------------------------------------------------------------------------------------------------------
+JavaScript Steps:
+
+1.Event Listener for DOM Load
+
+window.addEventListener("DOMContentLoaded", function () {
+    var select = document.getElementById("categoryFilter");
+    var items = document.querySelectorAll(".product-item");
+
+-- Waits for HTML to fully load before running JS.
+-- Selects the dropdown using getElementById.
+-- Selects all product items using querySelectorAll.
+
+2.Filter Function
+
+function applyFilter() {
+    var selected = select.value;
+    for (var i = 0; i < items.length; i++) {
+        var item = items[i];
+        var category = item.getAttribute("data-category");
+        if (selected === "All" || selected === category) {
+            item.style.display = "";
+        } else {
+            item.style.display = "none";
+        }
+    }
+}
+-- Gets selected category from dropdown.
+-- Loops through each product item.
+-- If category matches or "All" is selected → show item.
+-- Else → hide item by setting display: none.
+
+3.Attach Event and Initialize
+
+select.addEventListener("change", applyFilter);
+applyFilter();
+
+-- Runs applyFilter() when dropdown value changes.
+-- Runs once initially to apply default filter.
+-----------------------------------------------------------------------------------------------------------
+JavaScript Features Used
+
+-- Event Handling – DOMContentLoaded and change event.
+-- DOM Manipulation – getElementById, querySelectorAll, style.display.
+-- Data Attributes – Used for filtering products.
+-- Loop and Conditional Logic – To show/hide elements dynamically.
+-----------------------------------------------------------------------------------------------------------
+
+Learning Outcomes
+-- How to create an interactive filter using HTML, CSS, and JS.
+-- How to use data attributes for dynamic filtering.
+-- How to handle user input using event listeners.
+-- How to manipulate DOM using JS loops and conditions.
+-- How to structure and style responsive UI components.
