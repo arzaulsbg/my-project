@@ -1,0 +1,210 @@
+SVG Drawing Tool - Experiment 6
+
+A simple web-based SVG drawing application using HTML, CSS, and JavaScript, allowing users to draw freehand lines by clicking and dragging inside an SVG canvas. It provides a responsive layout and uses SVG <path> elements for dynamic line creation.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Steps of HTML Structure
+1. Main Container
+<div class="drawing-container"> ... </div>-- Wraps all elements for structured layout and styling.
+
+2. Title
+<h1>SVG Drawing Tool</h1>-- Displays the main heading of the application.
+
+3. Canvas Wrapper
+<div class="canvas-wrapper">
+    <svg id="drawArea" width="800" height="400" role="img" aria-label="Drawing area" tabindex="0"></svg>
+</div>
+
+-- <div class="canvas-wrapper"> wraps the drawing area for styling.
+-- <svg> acts as the drawing area where paths will be added dynamically.
+Attributes:
+-- id="drawArea": Used to access SVG via JavaScript.
+-- role="img" & aria-label="Drawing area": Improves accessibility.
+-- tabindex="0": Makes SVG focusable via keyboard.
+
+4. Hint Text
+<p class="hint">Click and drag inside the box to draw lines. Release mouse to finish a line. Draw again to start a new line.</p>
+
+-- Displays user instructions for interaction.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+HTML Elements:
+-- <div> – Used for container layout.
+-- <h1> – Displays the page title.
+-- <svg> – Serves as a drawing canvas.
+-- <p> – Shows hints for the user.
+-- <script> – Links the JavaScript logic.
+-- <link> – Links CSS file for styling.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Steps of CSS
+1. Main Layout Container
+.drawing-container {
+    border: 1px solid #222;
+    padding: 16px;
+    margin: 20px auto;
+    max-width: 860px;
+    background: #fff;
+}
+Explanation:
+-- border: Adds 1px solid dark gray border.
+-- padding: Adds 16px inner spacing.
+-- margin: 20px top-bottom, auto horizontally for center alignment.
+-- max-width: Restricts container to 860px width.
+-- background: Sets white background color.
+
+2. Title
+h1 {
+    margin: 0 0 12px 0;
+}
+-- margin: Removes top margin, adds 12px bottom margin for spacing.
+
+3. Canvas Wrapper
+.canvas-wrapper {
+    border: 1px solid #222;
+    background: #fafafa;
+    padding: 12px;
+}
+-- border: Adds border around SVG wrapper.
+-- background: Light gray background.
+-- padding: 12px spacing inside wrapper.
+
+4. SVG Drawing Area
+#drawArea {
+    border: 1px solid #444;
+    background: #fdfdfd;
+    display: block;
+}
+-- border: Darker border for the actual drawing area.
+-- background: Very light background for contrast.
+-- display: block: Ensures SVG behaves as block-level element.
+
+5. Hint Text
+.hint {
+    font-size: 0.9em;
+    margin-top: 12px;
+    color: #333;
+}
+-- font-size: Slightly smaller than normal text.
+-- margin-top: Adds space above hint text.
+-- color: Dark gray text for readability.
+
+6. Drawn Lines
+.line {
+    stroke: #0a74c9;
+    stroke-width: 2;
+    fill: none;
+}
+-- stroke: Sets line color to blue.
+-- stroke-width: Line thickness is 2px.
+-- fill: No fill for the path.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CSS Technologies Used:
+
+-- Box Model – Used for padding, margin, and border.
+-- Background & Colors – For UI styling.
+-- Accessibility & Readability – Font sizes and colors optimized.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+JavaScript Steps:
+1. Event Listener for DOM Load
+window.addEventListener("DOMContentLoaded", function () {
+    var svg = document.getElementById("drawArea");
+    var isDrawing = false;
+    var currentPath = null;
+    var points = [];
+
+-- Waits for the HTML to fully load before running the script.
+-- Selects SVG element using getElementById.
+-- Initializes state variables for drawing.
+
+2. Helper Function for Mouse Position
+function getPoint(evt) {
+    var rect = svg.getBoundingClientRect();
+    var x = evt.clientX - rect.left;
+    var y = evt.clientY - rect.top;
+    return { x: x, y: y };
+}
+-- function getPoint(evt) { → Declares a function named getPoint that takes an event object (evt) as a parameter.
+-- var rect = svg.getBoundingClientRect(); → Gets the position and size of the SVG element relative to the viewport and stores it in rect.
+-- var x = evt.clientX - rect.left; → Calculates the X coordinate of the click relative to the SVG by subtracting the SVG's left offset from the mouse X position.
+-- var y = evt.clientY - rect.top; → Calculates the Y coordinate of the click relative to the SVG by subtracting the SVG's top offset from the mouse Y position.
+-- return { x: x, y: y }; → Returns an object with the calculated x and y coordinates.
+-- } → Ends the function.
+
+-- Converts mouse position to SVG coordinates.
+
+3. Start Drawing on Mouse Down
+svg.addEventListener("mousedown", function (evt) {
+    isDrawing = true;
+    points = [];
+    var p = getPoint(evt);
+    points.push(p);
+
+    currentPath = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    currentPath.setAttribute("class", "line");
+    currentPath.setAttribute("d", "M " + p.x + " " + p.y);
+    svg.appendChild(currentPath);
+});
+
+
+-- Sets isDrawing = true.
+-- Creates a new <path> element inside SVG.
+-- Starts path with M command for initial position.
+
+4. Draw While Mouse Moves
+svg.addEventListener("mousemove", function (evt) {
+    if (!isDrawing || !currentPath) return;
+    var p = getPoint(evt);
+    points.push(p);
+
+    var d = "M " + points[0].x + " " + points[0].y;
+    for (var i = 1; i < points.length; i++) {
+        d += " L " + points[i].x + " " + points[i].y;
+    }
+    currentPath.setAttribute("d", d);
+});
+
+-- svg.addEventListener("mousemove", ...) → Listens for mouse movement on the SVG.
+-- if (!isDrawing || !currentPath) return; → Stops if not drawing or no path.
+-- var p = getPoint(evt); → Gets mouse position in SVG.
+-- points.push(p); → Adds the point to the points array.
+-- var d = "M " + points[0].x + " " + points[0].y; → Starts path at first point.
+-- for (var i = 1; i < points.length; i++) { d += " L " + points[i].x + " " + points[i].y; } → Adds lines to remaining points.
+-- currentPath.setAttribute("d", d); → Updates path shape on SVG.
+
+-- Continuously updates path d attribute as user moves mouse.
+
+5. Stop Drawing on Mouse Up or Leave
+function endDrawing() {
+    if (isDrawing) {
+        isDrawing = false;
+        currentPath = null;
+        points = [];
+    }
+}
+svg.addEventListener("mouseup", endDrawing);
+svg.addEventListener("mouseleave", endDrawing);
+
+-- function endDrawing() { → Defines a function to stop drawing.
+-- if (isDrawing) { → Runs only if drawing is active.
+-- isDrawing = false; → Turns off drawing mode.
+-- currentPath = null; → Clears the current SVG path.
+-- points = []; → Empties the points array.
+-- } → Ends if block.
+-- } → Ends function.
+-- svg.addEventListener("mouseup", endDrawing); → Stops drawing when mouse is released.
+-- svg.addEventListener("mouseleave", endDrawing); → Stops drawing when mouse leaves the SVG.
+
+-- Ends the drawing and resets variables.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+JavaScript Features Used
+
+-- Event Handling – DOMContentLoaded, mousedown, mousemove, mouseup, mouseleave.
+-- DOM Manipulation – createElementNS, setAttribute.
+-- SVG Path Commands – M (Move), L (Line to).
+-- Mouse Coordinate Calculation – Adjusted relative to SVG.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Learning Outcomes
+
+-- How to create an interactive drawing tool using SVG.
+-- How to manipulate SVG elements dynamically with JavaScript.
+-- How to use path commands (M, L) for freehand drawing.
+-- How to handle mouse events for real-time graphics.
+-- How to design accessible and responsive UI using HTML and CSS.
