@@ -75,6 +75,13 @@ function App() {
 export default App;
 ```
 
+**Explanation:**  
+Manages the state for books and search term.
+
+Provides functions to add and remove books.
+
+Dynamically filters books based on the search input.
+
 ---
 
 ### 📍 Step 2: SearchBar.js
@@ -96,6 +103,9 @@ function SearchBar({ searchTerm, setSearchTerm }) {
 
 export default SearchBar;
 ```
+
+**Explanation:**  
+A controlled component that updates the searchTerm state as the user types.
 
 ---
 
@@ -137,6 +147,9 @@ function BookForm({ onAddBook }) {
 export default BookForm;
 ```
 
+**Explanation:**  
+Handles book addition with controlled inputs for title and author. Clears fields after submitting.
+
 ---
 
 ### 📍 Step 4: BookList.js
@@ -162,6 +175,9 @@ function BookList({ books, onRemoveBook }) {
 export default BookList;
 ```
 
+**Explanation:**
+Loops through books and renders BookItem for each. Displays a fallback message if no books match.
+
 ---
 
 ### 📍 Step 5: BookItem.js
@@ -182,6 +198,9 @@ function BookItem({ book, onRemoveBook }) {
 
 export default BookItem;
 ```
+
+**Explanation:**
+Displays a single book’s title & author with a button to remove it from the list.
 
 ---
 
@@ -246,6 +265,9 @@ h1 {
   background: #ff4c4c;
 }
 ```
+
+**Explanation:**
+Adds a clean and minimal UI design for the app, with hover effects and responsive layout.
 
 ---
 
