@@ -10,27 +10,27 @@ This project is a **React-based Library Management UI** that allows users to:
 
 ---
 
-Project Structure
+### 📂 Project Structure
 
-```src/
-index.js
-App.js
-App.css
-components/
-Header.js
-LibraryManagement.js
-SearchBar.js
-AddBookForm.js
-BookList.js
-BookCard.js
+```bash
+src/
+ ┣ index.js
+ ┣ App.js
+ ┣ App.css
+ ┗ components/
+    ┣ Header.js
+    ┣ LibraryManagement.js
+    ┣ SearchBar.js
+    ┣ AddBookForm.js
+    ┣ BookList.js
+    ┗ BookCard.js
 ```
 
 ---
 
-## 📍 Step 1: Setting up `App.js`
+### 📍 Step 1: App.js
 
-````jsx
-// src/App.js
+```jsx
 import React, { useState } from "react";
 import "./App.css";
 import SearchBar from "./components/SearchBar";
@@ -72,17 +72,14 @@ function App() {
   );
 }
 
-export default App;```
-Explanation:
+export default App;
+```
 
-Manages the state for books and search term.
+---
 
-Provides functions to add and remove books.
+### 📍 Step 2: SearchBar.js
 
-Dynamically filters books based on the search input.
-----------------------------------------------------------------------------------------------------------------------------------------------------
-📍 Step 2: Creating SearchBar.js
-```// src/components/SearchBar.js
+```jsx
 import React from "react";
 
 function SearchBar({ searchTerm, setSearchTerm }) {
@@ -97,13 +94,14 @@ function SearchBar({ searchTerm, setSearchTerm }) {
   );
 }
 
-export default SearchBar;```
-Explanation:
-A controlled component that updates the searchTerm state as the user types.
-----------------------------------------------------------------------------------------------------------------------------------------------------
-📍 Step 3: Creating BookForm.js
-jsx
-```// src/components/BookForm.js
+export default SearchBar;
+```
+
+---
+
+### 📍 Step 3: BookForm.js
+
+```jsx
 import React, { useState } from "react";
 
 function BookForm({ onAddBook }) {
@@ -136,13 +134,14 @@ function BookForm({ onAddBook }) {
   );
 }
 
-export default BookForm;```
-Explanation:
-Handles book addition with controlled inputs for title and author. Clears fields after submitting.
-----------------------------------------------------------------------------------------------------------------------------------------------------
-📍 Step 4: Creating BookList.js
+export default BookForm;
 ```
-// src/components/BookList.js
+
+---
+
+### 📍 Step 4: BookList.js
+
+```jsx
 import React from "react";
 import BookItem from "./BookItem";
 
@@ -160,13 +159,14 @@ function BookList({ books, onRemoveBook }) {
   );
 }
 
-export default BookList;```
-Explanation:
-Loops through books and renders BookItem for each. Displays a fallback message if no books match.
-----------------------------------------------------------------------------------------------------------------------------------------------------
-📍 Step 5: Creating BookItem.js
+export default BookList;
 ```
-// src/components/BookItem.js
+
+---
+
+### 📍 Step 5: BookItem.js
+
+```jsx
 import React from "react";
 
 function BookItem({ book, onRemoveBook }) {
@@ -180,14 +180,14 @@ function BookItem({ book, onRemoveBook }) {
   );
 }
 
-export default BookItem;```
-Explanation:
-Displays a single book’s title & author with a button to remove it from the list.
-----------------------------------------------------------------------------------------------------------------------------------------------------
-🎨 Step 6: Styling with App.css
+export default BookItem;
 ```
-/* src/App.css */
 
+---
+
+### 🎨 Step 6: App.css
+
+```css
 .app-container {
   max-width: 500px;
   margin: 20px auto;
@@ -244,19 +244,17 @@ h1 {
 
 .book-item button:hover {
   background: #ff4c4c;
-}```
-Explanation:
-Adds a clean and minimal UI design for the app, with hover effects and responsive layout.
-
-🎯 Learning Outcomes
-By completing this project, you will learn:
-✅ React State Management – using useState to manage dynamic data.
-✅ Props Drilling & Component Communication – passing data/functions between parent & child components.
-✅ Controlled Components – managing form inputs with React state.
-✅ Dynamic Rendering – filtering and displaying lists based on search queries.
-✅ Event Handling – handling onChange, onSubmit, and onClick events.
-✅ Separation of Concerns – structuring a React project with reusable components.
-✅ Basic Styling with CSS – styling React components using external stylesheets.
-
+}
 ```
-````
+
+---
+
+### 📚 Learning Outcomes
+
+✅ React State Management with `useState`  
+✅ Props Drilling & Component Communication  
+✅ Controlled Components (form inputs)  
+✅ Dynamic Rendering (search filter, list render)  
+✅ Event Handling (`onChange`, `onSubmit`, `onClick`)  
+✅ Separation of Concerns with components  
+✅ Styling React apps using CSS
