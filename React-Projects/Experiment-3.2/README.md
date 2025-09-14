@@ -11,7 +11,8 @@ This project is a **React-based Library Management UI** that allows users to:
 ---
 
 Project Structure
-src/
+
+```src/
 index.js
 App.js
 App.css
@@ -22,12 +23,13 @@ SearchBar.js
 AddBookForm.js
 BookList.js
 BookCard.js
+```
 
 ---
 
 ## 📍 Step 1: Setting up `App.js`
 
-```jsx
+````jsx
 // src/App.js
 import React, { useState } from "react";
 import "./App.css";
@@ -70,7 +72,7 @@ function App() {
   );
 }
 
-export default App;
+export default App;```
 Explanation:
 
 Manages the state for books and search term.
@@ -80,9 +82,7 @@ Provides functions to add and remove books.
 Dynamically filters books based on the search input.
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 📍 Step 2: Creating SearchBar.js
-jsx
-Copy code
-// src/components/SearchBar.js
+```// src/components/SearchBar.js
 import React from "react";
 
 function SearchBar({ searchTerm, setSearchTerm }) {
@@ -97,14 +97,13 @@ function SearchBar({ searchTerm, setSearchTerm }) {
   );
 }
 
-export default SearchBar;
+export default SearchBar;```
 Explanation:
 A controlled component that updates the searchTerm state as the user types.
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 📍 Step 3: Creating BookForm.js
 jsx
-Copy code
-// src/components/BookForm.js
+```// src/components/BookForm.js
 import React, { useState } from "react";
 
 function BookForm({ onAddBook }) {
@@ -137,13 +136,12 @@ function BookForm({ onAddBook }) {
   );
 }
 
-export default BookForm;
+export default BookForm;```
 Explanation:
 Handles book addition with controlled inputs for title and author. Clears fields after submitting.
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 📍 Step 4: Creating BookList.js
-jsx
-Copy code
+```
 // src/components/BookList.js
 import React from "react";
 import BookItem from "./BookItem";
@@ -162,13 +160,12 @@ function BookList({ books, onRemoveBook }) {
   );
 }
 
-export default BookList;
+export default BookList;```
 Explanation:
 Loops through books and renders BookItem for each. Displays a fallback message if no books match.
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 📍 Step 5: Creating BookItem.js
-jsx
-Copy code
+```
 // src/components/BookItem.js
 import React from "react";
 
@@ -183,13 +180,12 @@ function BookItem({ book, onRemoveBook }) {
   );
 }
 
-export default BookItem;
+export default BookItem;```
 Explanation:
 Displays a single book’s title & author with a button to remove it from the list.
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 🎨 Step 6: Styling with App.css
-css
-Copy code
+```
 /* src/App.css */
 
 .app-container {
@@ -248,7 +244,7 @@ h1 {
 
 .book-item button:hover {
   background: #ff4c4c;
-}
+}```
 Explanation:
 Adds a clean and minimal UI design for the app, with hover effects and responsive layout.
 
@@ -263,3 +259,4 @@ By completing this project, you will learn:
 ✅ Basic Styling with CSS – styling React components using external stylesheets.
 
 ```
+````
