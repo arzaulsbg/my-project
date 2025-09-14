@@ -1,9 +1,87 @@
-.col{
-  /* background-color: red; */
-  margin: 10px;
-
+/* container */
+.container {
+  max-width: 720px;
+  margin: 28px auto;
+  padding: 18px;
+  border: 2px solid #111;
+  border-radius: 6px;
+  background: #fff;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
-.main-container{
-  overflow: auto;
-  border: 5px solid black;
+
+/* header */
+.header h1 {
+  margin: 0 0 14px 0;
+  font-size: 22px;
+}
+
+/* search */
+.search {
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 12px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* add form */
+.form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  flex: 1;
+}
+.btn {
+  padding: 8px 12px;
+  border: 1px solid #666;
+  background: #33ff00;
+  color: black;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* book list and card */
+.book-list {
+  margin-top: 8px;
+}
+.book-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fafafa;
+}
+.book-info strong { margin-right: 6px; }
+
+/* "Remove" button */
+.remove-btn {
+  padding: 6px 10px;
+  background: rgb(228, 55, 55);
+  border: 1px solid #d6cfcf;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.remove-btn:hover {
+  background: #f2f2f2;
+}
+
+/* empty state */
+.empty {
+  color: #666;
+  font-style: italic;
 }

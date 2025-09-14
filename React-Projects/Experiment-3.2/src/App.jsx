@@ -2,11 +2,7 @@ import React from "react";
 import LibraryManagement from "./components/LibraryManagement";
 
 function App() {
-  return (
-    <div>
-      <LibraryManagement />
-    </div>
-  );
+  return <LibraryManagement />;
 }
 
 export default App;
