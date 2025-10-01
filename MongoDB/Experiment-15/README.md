@@ -32,7 +32,7 @@ Experiment-15/
 ## Data Model
 
 ### Product
-\`\`\`json
+```json
 {
   "_id": "ObjectId",
   "name": "String",       // required
@@ -44,12 +44,12 @@ Experiment-15/
   "createdAt": "Date",
   "updatedAt": "Date"
 }
-\`\`\`
+```
 
 ### Example Variant
-\`\`\`json
+```json
 { "color": "Red", "size": "M", "stock": 10 }
-\`\`\`
+```
 
 ---
 
@@ -74,12 +74,12 @@ Experiment-15/
 ## Sample Requests
 
 ### Seed Sample Products
-\`\`\`bash
+```bash
 curl -X POST http://localhost:3000/products/seed
-\`\`\`
+```
 
 ### Create a Product with Variants
-\`\`\`http
+```http
 POST /products
 Content-Type: application/json
 
@@ -92,10 +92,10 @@ Content-Type: application/json
     { "color": "Silver", "size": "17-inch", "stock": 2 }
   ]
 }
-\`\`\`
+```
 
 ### Add a Variant
-\`\`\`http
+```http
 POST /products/<productId>/variants
 Content-Type: application/json
 
@@ -104,39 +104,39 @@ Content-Type: application/json
   "size": "15-inch",
   "stock": 5
 }
-\`\`\`
+```
 
 ### Update Variant Stock
-\`\`\`http
+```http
 PUT /products/<productId>/variants/<variantId>/stock
 Content-Type: application/json
 
 { "stock": 12 }
-\`\`\`
+```
 
 ### Filter Products by Color
-\`\`\`http
+```http
 GET /products/by-color/Blue
-\`\`\`
+```
 
 ---
 
 ## Setup and Run
 
 ### Install dependencies
-\`\`\`bash
+```bash
 npm install
-\`\`\`
+```
 
 ### Start MongoDB locally
 Ensure MongoDB is running on the default port (27017).
 
 ### Run server
-\`\`\`bash
+```bash
 npm start
 # or
 node server.js
-\`\`\`
+```
 
 Open browser: [http://localhost:3000](http://localhost:3000)
 
