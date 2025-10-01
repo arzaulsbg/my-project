@@ -14,7 +14,7 @@ A beginner-friendly MongoDB + Express experiment implementing a persistent e-com
 
 ## Folder Structure
 
-\`\`\`
+```
 Experiment-15/
 ├── controllers/
 │   └── productController.js    # Product logic (CRUD + filters + variant operations)
@@ -25,7 +25,7 @@ Experiment-15/
 ├── server.js                   # App bootstrap + MongoDB connection
 ├── package.json                # Dependencies & scripts
 └── README.md                   # This documentation
-\`\`\`
+```
 
 ---
 
