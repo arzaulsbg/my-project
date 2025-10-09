@@ -155,12 +155,12 @@ curl -H "Authorization: Bearer mysecrettoken" http://localhost:3000/protected
 
 By completing this project, you will learn to:
 
-1. 🧠 Understand how **Express.js** handles HTTP requests and responses.  
-2. 🔐 Implement **Bearer Token Authentication** for route protection.  
-3. ⚙️ Create and apply **custom middleware** in Express.  
-4. 🧱 Use **Express Router** to organize routes modularly.  
-5. 🧾 Perform **CRUD operations** (Create, Read, Update, Delete) using REST APIs.  
-6. 🧰 Practice proper project structuring and use of **HTTP methods** (GET, POST, PUT, DELETE).  
-7. 🪵 Log request data (method, URL, timestamp) using middleware.  
+1. Understand how **Express.js** handles HTTP requests and responses.  
+2. Implement **Bearer Token Authentication** for route protection.  
+3. Create and apply **custom middleware** in Express.  
+4. Use **Express Router** to organize routes modularly.  
+5. Perform **CRUD operations** (Create, Read, Update, Delete) using REST APIs.  
+6. Practice proper project structuring and use of **HTTP methods** (GET, POST, PUT, DELETE).  
+7. Log request data (method, URL, timestamp) using middleware.  
 
 ---
