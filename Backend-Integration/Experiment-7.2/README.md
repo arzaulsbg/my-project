@@ -138,34 +138,3 @@ Through this project, you will learn:
 This project is open-source and available for educational purposes.
 
 ```
-Experiment-7.2
-├─ chat-backend
-│  ├─ package-lock.json
-│  ├─ package.json
-│  └─ server.js
-├─ chat-frontend
-│  ├─ package-lock.json
-│  ├─ package.json
-│  ├─ public
-│  │  ├─ favicon.ico
-│  │  ├─ index.html
-│  │  ├─ logo192.png
-│  │  ├─ logo512.png
-│  │  ├─ manifest.json
-│  │  └─ robots.txt
-│  ├─ README.md
-│  └─ src
-│     ├─ App.css
-│     ├─ App.js
-│     ├─ App.test.js
-│     ├─ index.css
-│     ├─ index.js
-│     ├─ logo.svg
-│     ├─ reportWebVitals.js
-│     └─ setupTests.js
-├─ outputs
-│  ├─ Screenshot 2025-10-16 211813.png
-│  └─ Screenshot 2025-10-16 211857.png
-└─ README.md
-
-```
