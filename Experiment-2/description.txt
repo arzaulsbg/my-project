@@ -3,12 +3,10 @@ Banking UI Design using HTML and CSS:
 1.I made a simple web page that looks like a small banking screen.
 
 It shows:
-
 	1.A balance (starts at $2000)
-
 	2.Two buttons – one for Deposit and one for Withdraw
 
-2.I wrote the layout using HTML, and the design using CSS.
+2.I created the layout using HTML, and the design using CSS.
 
 3.I linked an external CSS file (Experiment_2.css) to style everything.
 
