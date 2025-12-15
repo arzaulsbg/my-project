@@ -12,7 +12,6 @@ Step of  HTML structure:
 2.Title
 
     <div class="counter-title">Live Character Counter</div> displays the heading.
-
 3.Textarea Input
 
     <textarea id="myTextarea" placeholder="Start typing..."></textarea> is where the user types text.
