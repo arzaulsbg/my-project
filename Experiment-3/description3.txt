@@ -183,7 +183,6 @@ Removes any default padding inside the body element.
 4.--bg-footer: ##117218; — (Typo: remove extra #, should be #117218) dark green footer background.
 
 5.--text-color: #ffffff; — White text color for dark mode.
-
 9. Mode change ------------------------------------------------------------------------------------------------------
 #switchMode {
     display: none;
@@ -197,7 +196,6 @@ Hides the checkbox input element, since it’s only used to toggle theme state b
 - **Flexbox** - Internal header layout
 - **CSS Selectors** - Element targeting and theme switching
 - **Pseudo-selectors** - `:checked` state for theme toggle
-
 --------------------------------------------------------------------------------------------------------------------------
 Leaning Outcomes:----------------------------
 1.learn how to build a dashboard layout using basic HTML tags.
