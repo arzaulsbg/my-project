@@ -1,8 +1,7 @@
 # Admin Dashboard Project - Experiment 3
 
-A admin dashboard interface built using HTML5 and CSS Grid Layout, featuring light/dark theme switching without JavaScript. This experiment demonstrates  CSS Grid techniques, the use of CSS custom properties for dynamic theming, and a pure CSS toggle mechanism.
-
-
+A admin dashboard interface built using HTML5 and CSS Grid Layout, featuring light/dark theme switching without JavaScript. This experiment demonstrates  CSS 
+Grid techniques, the use of CSS custom properties for dynamic theming, and a pure CSS toggle mechanism.
 -----------------------------------------------------------------------------------------------------------
 Step of  HTML structure:
 
