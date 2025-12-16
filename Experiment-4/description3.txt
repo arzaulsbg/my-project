@@ -4,7 +4,6 @@ A simple web-based character counter built with HTML, CSS, and JavaScript, which
 
 -----------------------------------------------------------------------------------------------------------
 Step of  HTML structure:
-
 1.Container Section
 
     <div class="counter-container"> wraps all elements for styling and structure.
@@ -19,7 +18,6 @@ Step of  HTML structure:
 
     <div>Characters: <span id="charCount"></span></div> dynamically shows the live character count.
 5.Script
-
 -----------------------------------------------------------------------------------------------------------
 ### HTML Elements
 -- <div> – Main wrapper for structured layout.  
