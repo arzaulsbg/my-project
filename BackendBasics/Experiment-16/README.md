@@ -24,7 +24,6 @@ backend/
 ```
 
 ---
-
 ## ⚙️ Installation Steps
 
 1. **Navigate to the backend directory**
