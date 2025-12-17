@@ -25,9 +25,8 @@ Step of  HTML structure:
 Hidden by CSS, it controls the dark mode toggle.
 Label is connected to checkbox via for="switchMode" so clicking the label toggles the checkbox.
 
-1.Main container with CSS Grid
-
-    <div class="dashboard"> wraps the entire dashboard content.
+1.Main container with CSS Grid container
+<div class="dashboard"> wraps the entire dashboard content.
 -----------------------------------------------------------------------------------------------------------
 ### HTML Elements
 - `<input type="checkbox">` - Hidden theme toggle trigger
