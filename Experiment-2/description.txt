@@ -27,6 +27,5 @@ Learning outcomes:
 
 4.How to center things using flexbox.
 
-5.How to change button color when mouse goes over it (hover effect).
 
 
