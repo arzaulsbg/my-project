@@ -121,5 +121,4 @@ Leaning Outcomes:----------------------------
 1. How to build a functional user interface using basic HTML tags.  
 2. How to style a form and display dynamically updated text using CSS.  
 3. How to use JavaScript event listeners (input event) for real-time updates.  
-4. How to manipulate the DOM using getElementById and textContent.  
 
