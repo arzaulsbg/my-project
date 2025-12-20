@@ -25,7 +25,6 @@ Learning outcomes:
 
 3.How to style things like text, buttons, and boxes with CSS.
 
-4.How to center things using flexbox.
 
 
 
