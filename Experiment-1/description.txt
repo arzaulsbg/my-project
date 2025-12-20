@@ -14,5 +14,4 @@ Learning Outcomes:
 1.Learned how to make a form in a webpage.
 2.Learned how to add input boxes (text, number, email).
 3.Learned how to add validations to form fields.
-4.Learned how to use placeholders to guide user input.
 
