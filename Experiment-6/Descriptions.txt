@@ -207,4 +207,3 @@ Learning Outcomes
 -- How to manipulate SVG elements dynamically with JavaScript.
 -- How to use path commands (M, L) for freehand drawing.
 -- How to handle mouse events for real-time graphics.
--- How to design accessible and responsive UI using HTML and CSS.
