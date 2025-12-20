@@ -174,4 +174,3 @@ Learning Outcomes
 -- How to create an interactive filter using HTML, CSS, and JS.
 -- How to use data attributes for dynamic filtering.
 -- How to handle user input using event listeners.
--- How to manipulate DOM using JS loops and conditions.
