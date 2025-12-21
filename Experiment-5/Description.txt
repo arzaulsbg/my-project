@@ -173,4 +173,4 @@ JavaScript Features Used
 Learning Outcomes
 -- How to create an interactive filter using HTML, CSS, and JS.
 -- How to use data attributes for dynamic filtering.
--- How to handle user input using event listeners.
+
