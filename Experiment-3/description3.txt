@@ -200,4 +200,3 @@ Leaning Outcomes:----------------------------
 2.How CSS Grid helps make neat, organized page layouts.
 3.How to use CSS variables to easily change colors for light and dark themes.Switch between light and dark mode using only CSS, no JavaScript
 4.How to use Flexbox to arrange items nicely in the header.
-5.learn how to use CSS selectors and special states (like :checked) to change styles.
