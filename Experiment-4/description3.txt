@@ -118,6 +118,6 @@ window.addEventListener('DOMContentLoaded', function() {
 
 --------------------------------------------------------------------------------------------------------------------------
 Leaning Outcomes:----------------------------
-1. How to build a functional user interface using basic HTML tags.  
+1. How to build a functional user interface using basic HTML.
   
 
