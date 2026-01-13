@@ -19,7 +19,7 @@ It shows:
 8.I use HTML and CSS.
 
 Learning outcomes:
-1.How to make a basic web page using HTML and CSS.
+
 
 
 
