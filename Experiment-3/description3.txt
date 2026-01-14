@@ -200,3 +200,4 @@ Leaning Outcomes:----------------------------
 2.How CSS Grid helps make neat, organized page layouts.
 3.How to use CSS variables to easily change colors for light and dark themes.Switch between light and dark mode using only CSS, no JavaScript
 1.How to make a basic web page using HTML and CSS.
+Learning outcomes:
