@@ -18,7 +18,7 @@ It shows:
 8.Also make the page responsive.
 8.I use HTML and CSS.
 
-Learning outcomes:
+
 
 
 
