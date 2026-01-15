@@ -15,8 +15,7 @@ It shows:
 6.I styled the Deposit button in green and the Withdraw button in red.
 
 7.I also added a hover effect – when you move your mouse over the buttons, the color gets a bit darker and the text turns black.
-8.Also make the page responsive.
-8.I use HTML and CSS.
+
 
 
 
