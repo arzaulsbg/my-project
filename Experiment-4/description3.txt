@@ -120,7 +120,6 @@ window.addEventListener('DOMContentLoaded', function() {
 Leaning Outcomes:----------------------------
 1. How to build a functional user interface using basic.
 8.Also make the page responsive.
-8.I use HTML and CSS.
 
   
 
