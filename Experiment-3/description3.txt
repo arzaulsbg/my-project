@@ -8,7 +8,7 @@ Step of  HTML structure:
 1.Header section
 
     <header> holds the dashboard title and the toggle label.
-
+7.I also added a hover effect – when you move your mouse over the buttons, the color gets a bit darker and the text turns black.
 2.Navigation sidebar
 
     <nav> contains an unordered list <ul> with navigation links <li><a></a></li>.
