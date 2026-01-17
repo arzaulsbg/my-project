@@ -13,6 +13,8 @@ It shows:
 5.I gave the balance green color and big size so it stands out.
 
 6.I styled the Deposit button in green and the Withdraw button in red.
+Learning Outcomes:
+1.Learned how to make a form in a webpage.
 
 
 
