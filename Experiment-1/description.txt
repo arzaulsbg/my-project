@@ -9,6 +9,5 @@ We have uses Input boxes for name, email, and age.A Submit button to send the fo
 Validation:
 1.In Full Name- Must enter only letters and spaces (no numbers or special characters)
 2.In Email-Must enter a valid email (with @ and domain)
-3.In age column must enter a number between 1 and 120
 
 
