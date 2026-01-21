@@ -205,5 +205,4 @@ Learning outcomes:
 Learning Outcomes:
 1.Learned how to make a form in a webpage.
 3.In age column must enter a number between 1 and 120
-2.In Email-Must enter a valid email (with @ and domain)
 
