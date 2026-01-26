@@ -15,7 +15,7 @@ It shows:
 6.I styled the Deposit button in green and the Withdraw button in red.
 Learning Outcomes:
 1.Learned how to make a form in a webpage.
-2.In Email-Must enter a valid email (with @ and domain)
+)
 
 
 
