@@ -176,4 +176,5 @@ Learning Outcomes
 
 8.Also make the page responsive.
 8.I use HTML and CSS.
-7.I also added a hover effect – when you move your mouse over the buttons, the color gets a bit darker and the text turns black.
+
+4.I used flexbox in CSS to center everything in the middle of the page.
