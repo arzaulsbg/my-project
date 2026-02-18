@@ -177,4 +177,4 @@ Learning Outcomes
 8.Also make the page responsive.
 8.I use HTML and CSS.
 
-4.I used flexbox in CSS to center everything in the middle of the page.
+
