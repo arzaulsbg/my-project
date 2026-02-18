@@ -8,8 +8,6 @@ It shows:
 
 3.I linked an external CSS file (Experiment_2.css) to style everything.
 
-4.I used flexbox in CSS to center everything in the middle of the page.
-
 5.I gave the balance green color and big size so it stands out.
 
 6.I styled the Deposit button in green and the Withdraw button in red.
