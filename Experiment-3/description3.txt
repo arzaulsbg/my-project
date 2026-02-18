@@ -205,7 +205,7 @@ Leaning Outcomes:----------------------------
 1.How to make a basic web page using HTML and CSS.
 Learning outcomes:
 8.Also make the page responsive.
-Learning Outcomes:
+
 
 
 
