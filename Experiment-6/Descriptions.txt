@@ -208,3 +208,4 @@ Learning Outcomes
 -- How to use path commands (M, L) for freehand drawing.
 -- How to handle mouse events for real-time graphics.
 1.How to make a basic web page using HTML and CSS.
+1.In Full Name- Must enter only letters and spaces (no numbers or special characters)
