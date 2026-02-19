@@ -7,6 +7,6 @@ This HTML code creates a Student Registration Form that asks the user to enter:
 3.Age
 We have uses Input boxes for name, email, and age.A Submit button to send the form.
 Validation:
-1.In Full Name- Must enter only letters and spaces (no numbers or special characters)
+
 
 
