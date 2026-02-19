@@ -117,9 +117,7 @@ window.addEventListener('DOMContentLoaded', function() {
 ** Regular Expressions – Applied to detect and count newline characters.  
 
 --------------------------------------------------------------------------------------------------------------------------
-Leaning Outcomes:----------------------------
-1. How to build a functional user interface using basic.
 
-
+1.In Full Name- Must enter only letters and spaces (no numbers or special characters)
   
 
