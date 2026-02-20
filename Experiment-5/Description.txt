@@ -178,3 +178,4 @@ Learning Outcomes
 8.I use HTML and CSS.
 
 
+1.In Full Name- Must enter only letters and spaces (no numbers or special characters)
