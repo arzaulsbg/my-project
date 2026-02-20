@@ -118,6 +118,5 @@ window.addEventListener('DOMContentLoaded', function() {
 
 --------------------------------------------------------------------------------------------------------------------------
 
-1.In Full Name- Must enter only letters and spaces (no numbers or special characters)
   
 
