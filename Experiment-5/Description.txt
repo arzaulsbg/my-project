@@ -174,7 +174,5 @@ Learning Outcomes
 -- How to create an interactive filter using HTML, CSS, and JS.
 -- How to use data attributes for dynamic filtering.
 
-8.Also make the page responsive.
-8.I use HTML and CSS.
 
 
