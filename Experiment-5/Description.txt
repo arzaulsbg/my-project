@@ -170,8 +170,7 @@ JavaScript Features Used
 -- Loop and Conditional Logic – To show/hide elements dynamically.
 -----------------------------------------------------------------------------------------------------------
 
-Learning Outcomes
--- How to create an interactive filter using HTML, CSS, and JS.
+
 
 
 
