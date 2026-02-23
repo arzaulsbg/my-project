@@ -169,7 +169,8 @@ JavaScript Features Used
 -- Data Attributes – Used for filtering products.
 -- Loop and Conditional Logic – To show/hide elements dynamically.
 -----------------------------------------------------------------------------------------------------------
-
+Learning Outcomes
+-- How to create an interactive filter using HTML, CSS, and JS.
 
 
 
