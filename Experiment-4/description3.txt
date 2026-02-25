@@ -116,7 +116,7 @@ window.addEventListener('DOMContentLoaded', function() {
 ** String Length Calculation – Handled character counting excluding newline characters.  4
 ** Regular Expressions – Applied to detect and count newline characters.  
 ** Regular Expressions – Applied to detect and count newline characters.  
-
+** Regular Expressions – Applied to detect and count newline characters.  
 
 --------------------------------------------------------------------------------------------------------------------------
 
