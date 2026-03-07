@@ -10,3 +10,4 @@ live-server --no-browser
 ```
 2. Refresh the URL in simple browser to see the output2. Refresh the URL in simple browser to see the output2. Refresh the URL in simple browser to see the output
 2. Refresh the URL in simple browser to see the output2. Refresh the URL in simple browser to see the output2. Refresh the URL in simple browser to see the output
+2. Refresh the URL in simple browser to see the output2. Refresh the URL in simple browser to see the output
