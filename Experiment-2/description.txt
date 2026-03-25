@@ -14,7 +14,6 @@ It shows:
 Learning Outcomes:
 1.Learned how to make a form in a webpage.
 )
-1.In Full Name- Must enter only letters and spaces (no numbers or special characters)
 
 
 
